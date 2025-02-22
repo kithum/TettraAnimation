@@ -1,0 +1,50 @@
+#hero {
+    background-color: rgb(22, 13, 13);
+    color: #fffb00; /* Adjust the color to match the effect */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 10vw; /* Adjust for responsiveness */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    position: relative;
+}
+
+.hero-text h1::before {
+    content: "Tettra Animation";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.1); /* Light overlay effect */
+    z-index: -1;
+}
+
+#hero {
+    background: url('grain-texture.png'), black;
+    background-size: cover;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    height: 40px;
+    background: rgba(162, 12, 175, 0.3);
+    border-radius: 5px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
